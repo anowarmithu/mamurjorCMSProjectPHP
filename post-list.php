@@ -82,7 +82,9 @@ if (isset($_GET['msg'])) {
 													<td class="border-bottom-0"><?php echo $row['short_description']; ?></td>
 													<td class="border-bottom-0"><?php echo $row['category_name']; ?></td>
 													<td class="border-bottom-0" style="text-transform: uppercase;"><?php echo $row['status']; ?></td>
-													<td class="border-bottom-0"><?php echo $row['created_at'] ?></td>
+													<td class="border-bottom-0"><?php $date = date_create($row['created_at']);
+        echo date_format($date, "h:i A d M Y");
+        ?></td>
 													<td class="border-bottom-0"><a href="post-update.php?id=<?php echo $row['id'] ?>">Edit   </a> || <a href="post-delete.php?id=<?php echo $row['id'] ?>" onclick="return confirm('Are you sure you want to delete this item?');"> Delete</a></td>
 													<td></td>
 

@@ -4,7 +4,8 @@ include "crud.php";
 
 $title = $_POST['title'];
 $short_description = $_POST['short_description'];
-$description = $_POST['description'];
+// $description = $_POST['description'];
+$description = htmlentities($_POST['editor']);
 // $image = $_POST['image'];
 $category_id = $_POST['category_id'];
 // $user_id = $_POST['user_id'];
